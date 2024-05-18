@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <button id="resetButton">Reset</button>
+        <p id="infos">
+            <div class="info-span">Next: <span id="playerName">Black</span> <span id="playerIcon"></span>, </div>
+            <div class="info-span">Mode: <span id="gameMode">Go: Game</span>, </div>
+            <div class="info-span"><span id="alert"></span></div>
+
+        </p>
+        <div id="board"></div>
+        <div id="infoPanel">
+            <div id="scoreBoard">
+                <p id="blackScore">Black <span id="blackIcon" class="circle black"></span> ... <div class="score-span">Area: <span id="blackArea">-</span>, </div><div class="score-span">Captures: <span id="whiteIcon" class="circle white"></span> <span id="whiteStonesTaken">0</span></div></p>
+                <p id="whiteScore">White <span id="whiteIcon" class="circle white"></span> ... <div class="score-span">Area: <span id="whiteArea">-</span>, </div><div class="score-span">Captures: <span id="blackIcon" class="circle black"></span> <span id="blackStonesTaken">0</span></div></p>
+            </div>
+            <button id="passButton">Pass</button>
+            <button id="flipButton">Flip Board</button>
+            <button id="undoButton">Undo</button>
+            <button id="endGameButton">Finish</button>
+            <button id="countButton">Count</button>
+            <button id="recountButton">Recount</button>
+            <button id="saveButton" disabled>Save Board</button>
+            <button id="reviewButton" disabled>Review</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
